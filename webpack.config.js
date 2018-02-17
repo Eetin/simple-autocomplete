@@ -10,6 +10,7 @@ const NODE_ENV = (process.env.NODE_ENV || 'development')
 const config = {
     devtool: NODE_ENV === 'production' ? 'source-map' : 'source-map',
     entry: [
+        '@babel/polyfill',
         path.resolve(__dirname, 'src', 'main.js'),
     ],
     target: 'web',
@@ -74,7 +75,6 @@ const config = {
 }
 
 if (NODE_ENV === 'production') {
-    config.entry.unshift('@babel/polyfill')
     config.plugins.push(
         new CompressionPlugin(),
         new webpack.optimize.AggressiveMergingPlugin(),
@@ -86,7 +86,8 @@ if (NODE_ENV === 'production') {
                 comments: false,
             },
             minimize: true,
-        }))
+        }),
+    )
 
     // Remove logging in production
     config.module.rules.push({
