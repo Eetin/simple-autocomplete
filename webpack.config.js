@@ -64,7 +64,6 @@ const config = {
             filename: 'index.html',
             template: 'index.ejs',
             inject: 'body',
-            hash: true,
         }),
         new webpack.NoEmitOnErrorsPlugin(),
         new ExtractTextPlugin('bundle.css'),
