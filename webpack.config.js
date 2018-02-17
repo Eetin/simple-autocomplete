@@ -44,13 +44,15 @@ const config = {
                             loader: 'style-loader',
                         }],
                         use: [
-                            { loader: 'css-loader' },
+                            { loader: 'css-loader', options: { minimize: true } },
+                            { loader: 'postcss-loader' },
                             { loader: 'sass-loader' },
                         ],
                     })
                     : [
                         { loader: 'style-loader' },
                         { loader: 'css-loader' },
+                        { loader: 'postcss-loader' },
                         { loader: 'sass-loader' },
                     ],
             },
