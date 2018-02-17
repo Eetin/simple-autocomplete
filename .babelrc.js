@@ -2,9 +2,6 @@ const presets = [
     ['@babel/preset-env', {
         debug: false,
         useBuiltIns: false,
-        targets: {
-            browsers: ['> 1%', 'ie 10', 'edge 15'],
-        },
     }],
     '@babel/preset-react',
 ]
