@@ -103,10 +103,7 @@ if (NODE_ENV === 'production') {
         'webpack-dev-server/client?http://0.0.0.0:9000',
         'webpack/hot/only-dev-server',
     )
-    config.plugins.push(
-        // new webpack.NamedModulesPlugin(),
-        new webpack.HotModuleReplacementPlugin()
-    )
+    config.plugins.push(new webpack.HotModuleReplacementPlugin())
 }
 
 module.exports = config
