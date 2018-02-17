@@ -1,0 +1,93 @@
+.autocomplete {
+
+  position: relative;
+  padding: 8px;
+
+  .input {
+    width: 100%;
+    font-size: 16px;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    border-radius: 4px;
+
+    &.suggestions-open {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+  }
+
+  .suggestions-list {
+
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    top: 44px;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    background: white;
+    box-sizing: border-box;
+    overflow: hidden;
+    max-height: 75vh;
+    box-shadow: 0 2px 40px 0 rgba(128, 128, 128, 0.5);
+
+    .suggestion-item {
+      cursor: pointer;
+      list-style: none;
+      padding: 8px;
+
+      &:hover {
+        background: aquamarine;
+      }
+
+      &.active {
+        background: aqua;
+        font-weight: bold;
+      }
+
+    }
+
+    &.open {
+      height: auto;
+      overflow-y: auto;
+      border: 1px solid gray;
+      border-top-width: 0;
+      border-radius: 0 0 4px 4px;
+    }
+
+  }
+
+}
+
+.results {
+
+  padding: 8px;
+
+  .result {
+
+    padding: 8px;
+
+    &:nth-child(2n) {
+      background: whitesmoke;
+    }
+
+  }
+
+  .laureate {
+
+    padding: 8px;
+
+    &:nth-child(2n) {
+      background: whitesmoke;
+    }
+
+    .prize {
+      padding: 8px;
+    }
+
+  }
+
+}
+
