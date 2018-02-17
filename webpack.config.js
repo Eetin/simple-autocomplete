@@ -15,12 +15,12 @@ const config = {
     ],
     target: 'web',
     output: {
-        path: path.join(__dirname, 'public'),
+        path: path.join(__dirname, 'docs'),
         filename: 'app.js',
         publicPath: '/',
     },
     devServer: {
-        contentBase: path.join(__dirname, 'public'),
+        contentBase: path.join(__dirname, 'docs'),
         hot: true,
         inline: true,
         historyApiFallback: true,
