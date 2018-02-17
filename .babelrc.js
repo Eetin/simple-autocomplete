@@ -12,6 +12,7 @@ const plugins = [
         '@babel/plugin-proposal-object-rest-spread',
         { useBuiltIns: true },
     ],
+    'react-hot-loader/babel',
 ]
 
 module.exports = {
